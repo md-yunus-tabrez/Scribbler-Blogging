@@ -2,23 +2,103 @@
 <html>
 
 <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- TODO: Include Font Awesome file here -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Satisfy&display=swap" rel="stylesheet">
 
     <link href='css/header.css' rel='stylesheet' type='text/css'>
     <link href='css/index.css' rel='stylesheet' type='text/css'>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
     <div class="header">
-        <input class="topButtons" type="button" value="Sign Up">
-        <input class="topButtons" type="button" value="Sign In">
+        
+        <button type="button" class="topButtons"  data-toggle="modal" data-target="#exampleModal" id="sign-in-button">
+        Sign In
+        </button>
+        <button type="button" class="topButtons"  data-toggle="modal" data-target="#exampleModalSignUp" id="sign-up-button">
+        Sign Up
+        </button> 
+
         <a id="pageTitle" class="logo-title">ScriBBler</a>
-        <p class="middleText">Explore,Imagine,Create</p>
+        <p class="middleText">Explore, Imagine, Create</p>
     </div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel" style="margin: 0 100px 0 160px;">Welcome Back!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <form>
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Username</label>
+                              <input type="text" class="form-control" required id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username">
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Password</label>
+                              <input type="password" class="form-control" required id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary"  style="width: 100%; margin-top: 10px; background-color: green;">Sign In</button>
+                           
+                    </form>
+                          <p class="lastdiv" style="margin: 10px 100px 0 150px; color: black;">Not a member? <a href="#" class="anchor" onclick="signuUpfunction()">Sign Up</a></p>
+            </div>
+            </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title"  style="margin: 0 100px 0 180px;">Get Started</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                        <form>
+                                <div class="form-group">
+                                        <label for="exampleInputName1">Full Name</label>
+                                        <input type="text" class="form-control" required id="exampleInputName1" aria-describedby="emailName" placeholder="Enter Full Name">
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleInputEmail1">Usernames</label>
+                                  <input type="text" class="form-control" required id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username">
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleInputPassword1">Password</label>
+                                  <input type="password" class="form-control" required id="exampleInputPassword1" placeholder="Enter Password">
+                                </div>
+                                <div class="form-group">
+                                        <label for="exampleInputPassword1">Confirm Password</label>
+                                        <input type="password" class="form-control" required id="exampleInputPassword2" placeholder="Confirm Password">
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="width: 100%; background-color: green;">Sign Up</button>
+                                
+                         </form>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+    
 </body>
 
 </html>

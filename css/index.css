@@ -1,17 +1,14 @@
-html { 
-    background: url("../images/background.jpg") no-repeat center center fixed; 
-    background-size: cover;
-}
-
-body{
-  margin: 0px;
+body { 
+    background: url(../images/background.jpg) center fixed;
+    background-repeat:no-repeat;
+    background-size: cover;;
 }
 
 button:hover {
  opacity:1;
 }
 
-input.topButtons {
+.topButtons {
  width: 90px;
  padding: 10px;
  cursor: pointer;
@@ -24,7 +21,7 @@ input.topButtons {
  font-family: Arial, Helvetica, sans-serif;
 }
 
-.logo-title {
+#pageTitle.logo-title {
 font-family: 'Satisfy', cursive;
 font-size: 50px;
 color: #112fb4;
