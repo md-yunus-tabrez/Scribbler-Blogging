@@ -10,9 +10,10 @@
     <!-- TODO: Include Google Fonts file here -->
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Satisfy&display=swap" rel="stylesheet">
-
+    <!-- css path -->
     <link href='css/header.css' rel='stylesheet' type='text/css'>
     <link href='css/index.css' rel='stylesheet' type='text/css'>
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -21,6 +22,7 @@
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
+    <!-- signIn & signUp button -->
     <div class="header">
         
         <button type="button" class="topButtons"  data-toggle="modal" data-target="#exampleModal">
@@ -33,18 +35,18 @@
         <a id="pageTitle" class="logo-title">ScriBBler</a>
         <p class="middleText">Explore, Imagine, Create</p>
     </div>
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" >
-        <div class="modal-dialog" role="document">
+      <!-- SignIn Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"  >
+        <div class="modal-dialog" role="document" style="margin: 10% auto;">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" style="margin: 0 100px 0 160px;">Welcome Back!</h5>
+              <h5 class="modal-title" style="margin: 0 100px 0 150px;">Welcome Back!</h5>
               <button type="button" class="close" data-dismiss="modal" >
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
-                    <form>
+            <div class="modal-body" >
+                    <form >
                             <div class="form-group">
                               <label >Username</label>
                               <input type="text" class="form-control" required placeholder="Enter Username">
@@ -56,12 +58,17 @@
                             <button type="submit" class="btn btn-primary"  style="width: 100%; margin-top: 10px; background-color: green;">Sign In</button>
                            
                     </form>
-                          <p class="lastdiv" data-toggle="modal" data-target="#exampleModalSignUp" style="margin: 10px 100px 0 150px; color: black;">Not a member? <a href="#" class="anchor" onclick="signuUpfunction()">Sign Up</a></p>
+                    <div class="modal-footer">
+                      <label class="w-100 text-center">
+                          Not a member?
+                          <span data-toggle="modal" data-dismiss="modal" data-target="#exampleModalSignUp" style="color: blue;"><a href="#">Sign Up</a></span>
+                      </label>
+                  </div>
             </div>
             </div>
         </div>
       </div>
-      <!-- Modal -->
+      <!-- SignUp Modal -->
       <div class="modal fade" id="exampleModalSignUp" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -71,11 +78,11 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" >
                         <form>
                                 <div class="form-group">
-                                        <label for="exampleInputName1">Full Name</label>
-                                        <input type="text" class="form-control" required placeholder="Enter Full Name">
+                                  <label for="exampleInputName1">Full Name</label>
+                                  <input type="text" class="form-control" required placeholder="Enter Full Name">
                                 </div>
                                 <div class="form-group">
                                   <label for="exampleInputEmail1">Usernames</label>
@@ -86,39 +93,55 @@
                                   <input type="password" class="form-control" required placeholder="Enter Password">
                                 </div>
                                 <div class="form-group">
-                                        <label for="exampleInputPassword1">Confirm Password</label>
-                                        <input type="password" class="form-control" required placeholder="Confirm Password">
+                                  <label for="exampleInputPassword1">Confirm Password</label>
+                                  <input type="password" class="form-control" required placeholder="Confirm Password">
                                 </div>
                                 <button type="submit" class="btn btn-primary" style="width: 100%; background-color: green;">Sign Up</button>
                                 
                          </form>
                 </div>
-                
               </div>
             </div>
           </div>
 
+<!-- Create Post & All Post button -->
+<span id="postButtons" class="CentreBtn">
+  <a href="html/bloglist.html">
+  <button class="Btn" style="margin-right: 15px;" onclick="allposts()">&nbsp;All Posts&nbsp;</button>
+  </a>
+  <button class="Btn" style="margin-right: 15px;" data-toggle="modal" data-target="#createPost">&nbsp;Create Post&nbsp;</button>
+</span>
 
-<div class="CentreBtn"> 
-<a href="html/bloglist.html">
-<button type="button" class="Btn" data-toggle="modal" data-target="allPost" style="margin-right: 15px;">All Posts</button>
-</a>
-<button type="button" class="Btn" data-toggle="modal" data-target="myBtn" style="margin-right: 15px;">Create Post</button>
-</div>
-<div class="create" id="post">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-        <h3>Pen Your Post</h3>
-        <form class="form">
-            <label>Title:</label>
-            <input type="text" name="" id="">
-            <label>Content:</label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-        </form>
+<!-- Create Post Modal -->
+  <div class="modal fade" id="createPost" tabindex="-1" role="dialog" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" style="margin: 0 100px 0 160px;">Pen Your Post</h5>
+          <button type="button" class="close" data-dismiss="modal" >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="post">
+                <form>
+                  <div class="form-group">
+                  <label>Title:</label>
+                  <input class="form-control" type="text" name="" id="">
+                  </div>
+
+                  <div class="form-group">
+                  <label >Content:</label>
+                  <textarea class="form-control" name="" id="" cols="60" rows="10"></textarea>
+                  </div>
+
+                  <button type="submit" class="CentreBtn" style="width: 20%; margin: 5px auto; background-color: rgb(6, 175, 15);">Create</button>
+                </form>
+        </div>
+        </div>
     </div>
   </div>
 
-
+<!-- js path -->
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/header.js"></script>
 </body>
