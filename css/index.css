@@ -1,7 +1,7 @@
 body { 
     background: url(../images/background.jpg) center fixed;
-    background-repeat:no-repeat;
-    background-size: cover;;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 button:hover {

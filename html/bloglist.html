@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TODO: Include Font Awesome file here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Satisfy&display=swap" rel="stylesheet">
+    <!-- css path -->
+    <link href='../css/header.css' rel='stylesheet' type='text/css'>
+    <link href='../css/bloglist.css' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <style>
+     
+    </style>
+</head>
+<body style="background-color: rgb(255, 174, 0);">
+        <!-- signIn & signUp button -->
+        <div class="header">
+        
+            <button type="button" class="topButtons"  data-toggle="modal" data-target="#exampleModal">
+            Sign In
+            </button>
+            <button type="button" class="topButtons"  data-toggle="modal" data-target="#exampleModalSignUp">
+            Sign Up
+            </button> 
+    
+            <a id="pageTitle" class="logo-title">ScriBBler</a>
+            <p class="middleText">Explore, Imagine, Create</p>
+        </div>
+          <!-- SignIn Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"  >
+            <div class="modal-dialog" role="document" style="margin: 10% auto;">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" style="margin: 0 100px 0 150px;">Welcome Back!</h5>
+                  <button type="button" class="close" data-dismiss="modal" >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" >
+                        <form >
+                                <div class="form-group">
+                                  <label >Username</label>
+                                  <input type="text" class="form-control" required style="background-color: rgb(236, 235, 235);" placeholder="Enter Username">
+                                </div>
+                                <div class="form-group">
+                                  <label >Password</label>
+                                  <input type="password" class="form-control" required style="background-color: rgb(236, 235, 235);" placeholder="Password">
+                                </div>
+                                <button type="submit" class="btn btn-primary"  style="width: 100%; margin-top: 10px; background-color: green;">Sign In</button>
+                               
+                        </form>
+                        <div class="modal-footer">
+                          <label class="w-100 text-center">
+                              Not a member?
+                              <span data-toggle="modal" data-dismiss="modal" data-target="#exampleModalSignUp" style="color: blue;"><a href="#">Sign Up</a></span>
+                          </label>
+                      </div>
+                </div>
+                </div>
+            </div>
+          </div>
+          <!-- SignUp Modal -->
+          <div class="modal fade" id="exampleModalSignUp" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" style="margin: 0 100px 0 180px;">Get Started</h5>
+                      <button type="button" class="close" data-dismiss="modal" >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body" >
+                            <form>
+                                    <div class="form-group">
+                                      <label for="exampleInputName1">Full Name</label>
+                                      <input type="text" class="form-control" style="background-color: rgb(236, 235, 235);" required placeholder="Enter Full Name">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="exampleInputEmail1">Usernames</label>
+                                      <input type="text" class="form-control" required style="background-color: rgb(236, 235, 235);" placeholder="Enter Username">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="exampleInputPassword1">Password</label>
+                                      <input type="password" class="form-control" required style="background-color: rgb(236, 235, 235);" placeholder="Enter Password">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="exampleInputPassword1">Confirm Password</label>
+                                      <input type="password" class="form-control" required style="background-color: rgb(236, 235, 235);" placeholder="Confirm Password">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" style="width: 100%; background-color: green;">Sign Up</button>
+                                    
+                             </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+
+<div class="blogPost">
+    <div class="postPair">
+        <!-- First Blogpost -->
+            <div class="post">
+              <div class="user">
+                <div class="name">
+                  <h4>Jimi</h4>
+                </div>
+              </div>
+              <div class="content">
+                <input onclick="document.getElementById('id01').style.display='block'" style="font-size:18px" class="fa" id="mybin" type="button" value="&#xf014;">
+                <a href="../html/post.html"><i style="font-size: 24px;" class="fa" id="dots">...</i></a>
+                <p class="postHead">Hello there! This is Post 1.</p>
+                <div class="comment">
+                <p class="postText">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music. [1] Hendrix expanded the range and vocabulary of the elettric guitar into areas no musician had</p>
+
+                </div> 
+              </div>
+            </div>
+        <!-- Second Blogpost -->
+            <div class="post">
+              <div class="user">
+                <div class="name">
+                  <h4>Jimi</h4>
+                </div>
+              </div>
+              <div class="content">
+                <input onclick="document.getElementById('id01').style.display='block'" style="font-size:18px" class="fa" id="mybin" type="button" value="&#xf014;">                <a href="../html/post.html"><i style="font-size: 24px;" class="fa" id="dots">...</i></a>
+                <p class="postHead">Hello there! This is Post 2.</p>
+                <div class="comment">
+                  <p class="postText">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music. [1] Hendrix expanded the range and vocabulary of the elettric guitar into areas no musician had</p>
+  
+                </div> 
+              </div>
+            </div>
+
+    </div>
+    <div class="postPair">
+        <!-- Third Blogpost -->
+            <div class="post">
+              <div class="user">
+                <div class="name">
+                  <h4>Jimi</h4>
+                </div>
+              </div>
+              <div class="content">
+                <input onclick="document.getElementById('id01').style.display='block'" style="font-size:18px" class="fa" id="mybin" type="button" value="&#xf014;">                <a href="../html/post.html"><i style="font-size: 24px;" class="fa" id="dots">...</i></a>
+                <p class="postHead">Hello there! This is Post 3.</p>
+                <div class="comment">
+                  <p class="postText">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music. [1] Hendrix expanded the range and vocabulary of the elettric guitar into areas no musician had</p>
+  
+                </div> 
+              </div>
+            </div>
+        <!-- Forth Blogpost -->
+            <div class="post">
+              <div class="user">
+                <div class="name">
+                  <h4>Jimi</h4>
+                </div>
+              </div>
+              <div class="content">
+                <input onclick="document.getElementById('id01').style.display='block'" style="font-size:18px" class="fa" id="mybin" type="button" value="&#xf014;">
+                <a href="../html/post.html"><i style="font-size: 24px;" class="fa" id="dots">...</i></a>
+                <p class="postHead">Hello there! This is Post 4.</p>
+                <div class="comment">
+                  <p class="postText">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music. [1] Hendrix expanded the range and vocabulary of the elettric guitar into areas no musician had</p>
+  
+                </div>
+              </div>
+            </div>
+    </div>
+        <!-- Fifth Blogpost -->
+    <div class="post" id="bPost5">
+            <div class="user">
+                <div class="name">
+                  <h4>Jimi</h4>
+                </div>
+            </div>
+            <div class="content">
+                <input onclick="document.getElementById('id01').style.display='block'" style="font-size:18px" class="fa" id="mybin" type="button" value="&#xf014;"> <a href="../html/post.html"><i style="font-size: 24px;" class="fa" id="dots">...</i></a>
+                <p class="postHead">Hello there! This is Post 5.</p>
+                <div class="comment">
+                  <p class="postText">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music. [1] Hendrix expanded the range and vocabulary of the elettric guitar into areas no musician had</p>  
+                </div> 
+            </div>
+    </div>
+</div>
+    <div id="id01" class="trash">
+            <form class="box-content">
+              <div style="background-color:E8E8E8;" class="choiceContainer">
+                <p style="font-weight: bold;">Are you sure you want to delete this post?</p>          
+                <div class="clearfix">
+                  <button type="button" id="trash" class="deletebtn">Yes</button>
+                  <button type="button" id="trash" class="cancelbtn">No</button>
+                </div>
+              </div>
+            </form>
+    </div>
+
+<!-- js path -->
+<script type="text/javascript" src="../js/bloglist.js"></script>
+<script type="text/javascript" src="../js/header.js"></script>    
+</body>
+</html>
